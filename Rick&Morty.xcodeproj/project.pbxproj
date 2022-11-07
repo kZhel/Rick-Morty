@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92BA291954420040B76A /* CharactersViewController.swift */; };
-		4ABC92BD291955B40040B76A /* CharacterScreenAssembly.s in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92BC291955B40040B76A /* CharacterScreenAssembly.s */; };
-		4ABC92C3291956810040B76A /* MainScreenAssembly.s in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92C2291956810040B76A /* MainScreenAssembly.s */; };
 		4ABC92C5291956AF0040B76A /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92C4291956AF0040B76A /* MainScreenPresenter.swift */; };
 		4ABC92C7291956D40040B76A /* MainScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92C6291956D40040B76A /* MainScreenButton.swift */; };
 		4ABC92C9291957130040B76A /* MainScreenButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92C8291957130040B76A /* MainScreenButtonType.swift */; };
 		4ABC92CB2919572D0040B76A /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92CA2919572D0040B76A /* MainScreenModel.swift */; };
+		4ABC92D1291959D70040B76A /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92D0291959D70040B76A /* MainScreenAssembly.swift */; };
+		4ABC92D329195A0A0040B76A /* CharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92D229195A0A0040B76A /* CharacterPresenter.swift */; };
 		4AF31CA329193ED100A11E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF31CA229193ED100A11E92 /* AppDelegate.swift */; };
 		4AF31CA529193ED100A11E92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF31CA429193ED100A11E92 /* SceneDelegate.swift */; };
 		4AF31CA729193ED100A11E92 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF31CA629193ED100A11E92 /* MainViewController.swift */; };
@@ -43,12 +43,12 @@
 
 /* Begin PBXFileReference section */
 		4ABC92BA291954420040B76A /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
-		4ABC92BC291955B40040B76A /* CharacterScreenAssembly.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = CharacterScreenAssembly.s; sourceTree = "<group>"; };
-		4ABC92C2291956810040B76A /* MainScreenAssembly.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = MainScreenAssembly.s; sourceTree = "<group>"; };
 		4ABC92C4291956AF0040B76A /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		4ABC92C6291956D40040B76A /* MainScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenButton.swift; sourceTree = "<group>"; };
 		4ABC92C8291957130040B76A /* MainScreenButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenButtonType.swift; sourceTree = "<group>"; };
 		4ABC92CA2919572D0040B76A /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		4ABC92D0291959D70040B76A /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		4ABC92D229195A0A0040B76A /* CharacterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPresenter.swift; sourceTree = "<group>"; };
 		4AF31C9F29193ED100A11E92 /* Rick&Morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&Morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF31CA229193ED100A11E92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF31CA429193ED100A11E92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4ABC92BA291954420040B76A /* CharactersViewController.swift */,
-				4ABC92BC291955B40040B76A /* CharacterScreenAssembly.s */,
+				4ABC92D229195A0A0040B76A /* CharacterPresenter.swift */,
 			);
 			path = CharactersScreen;
 			sourceTree = "<group>";
@@ -105,7 +105,7 @@
 				4ABC92C12919561B0040B76A /* Presenter */,
 				4ABC92C0291956120040B76A /* View */,
 				4ABC92BF291956050040B76A /* Model */,
-				4ABC92C2291956810040B76A /* MainScreenAssembly.s */,
+				4ABC92D0291959D70040B76A /* MainScreenAssembly.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -344,13 +344,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ABC92BD291955B40040B76A /* CharacterScreenAssembly.s in Sources */,
 				4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */,
 				4ABC92CB2919572D0040B76A /* MainScreenModel.swift in Sources */,
 				4ABC92C9291957130040B76A /* MainScreenButtonType.swift in Sources */,
 				4ABC92C7291956D40040B76A /* MainScreenButton.swift in Sources */,
 				4ABC92C5291956AF0040B76A /* MainScreenPresenter.swift in Sources */,
-				4ABC92C3291956810040B76A /* MainScreenAssembly.s in Sources */,
+				4ABC92D1291959D70040B76A /* MainScreenAssembly.swift in Sources */,
+				4ABC92D329195A0A0040B76A /* CharacterPresenter.swift in Sources */,
 				4AF31CA329193ED100A11E92 /* AppDelegate.swift in Sources */,
 				4AF31CA529193ED100A11E92 /* SceneDelegate.swift in Sources */,
 				4AF31CA729193ED100A11E92 /* MainViewController.swift in Sources */,
