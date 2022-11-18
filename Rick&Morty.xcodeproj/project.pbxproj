@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A586DFC29267C57001B8B24 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A586DFB29267C57001B8B24 /* EpisodesViewController.swift */; };
+		4A586E052926BD90001B8B24 /* EpisodesCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A586E042926BD90001B8B24 /* EpisodesCustomCell.swift */; };
+		4A586E082926BE53001B8B24 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A586E072926BE53001B8B24 /* EpisodeViewController.swift */; };
+		4A586E0D2926BE69001B8B24 /* EpisodeCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A586E0C2926BE69001B8B24 /* EpisodeCustomCell.swift */; };
 		4A9C5232292149B300146598 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C5231292149B300146598 /* LocationViewController.swift */; };
 		4A9C52352922AE6400146598 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C52342922AE6400146598 /* UIColor+.swift */; };
 		4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92BA291954420040B76A /* CharactersViewController.swift */; };
@@ -45,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A586DFB29267C57001B8B24 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = SOURCE_ROOT; };
+		4A586E042926BD90001B8B24 /* EpisodesCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EpisodesCustomCell.swift; path = ../../../../Downloads/EpisodesCustomCell.swift; sourceTree = "<group>"; };
+		4A586E072926BE53001B8B24 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		4A586E0C2926BE69001B8B24 /* EpisodeCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCustomCell.swift; sourceTree = "<group>"; };
 		4A9C5231292149B300146598 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		4A9C52342922AE6400146598 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4ABC92BA291954420040B76A /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A586E062926BE2C001B8B24 /* EpisodeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4A586E072926BE53001B8B24 /* EpisodeViewController.swift */,
+				4A586E0C2926BE69001B8B24 /* EpisodeCustomCell.swift */,
+			);
+			path = EpisodeScreen;
+			sourceTree = "<group>";
+		};
 		4A9C52332922AE4100146598 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +179,8 @@
 		4ABC92CD291957810040B76A /* EpisodesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4A586DFB29267C57001B8B24 /* EpisodesViewController.swift */,
+				4A586E042926BD90001B8B24 /* EpisodesCustomCell.swift */,
 			);
 			path = EpisodesScreen;
 			sourceTree = "<group>";
@@ -189,6 +208,7 @@
 		4AF31CA129193ED100A11E92 /* Rick&Morty */ = {
 			isa = PBXGroup;
 			children = (
+				4A586E062926BE2C001B8B24 /* EpisodeScreen */,
 				4A9C52332922AE4100146598 /* Extention */,
 				4ABC92CD291957810040B76A /* EpisodesScreen */,
 				4ABC92CC291957700040B76A /* LocationScreen */,
@@ -363,16 +383,20 @@
 			files = (
 				4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */,
 				4ABC92D529195C460040B76A /* CharactersScreenAssembly.swift in Sources */,
+				4A586DFC29267C57001B8B24 /* EpisodesViewController.swift in Sources */,
 				4ABC92CB2919572D0040B76A /* MainScreenModel.swift in Sources */,
 				4ABC92C9291957130040B76A /* MainScreenButtonType.swift in Sources */,
 				4ABC92C7291956D40040B76A /* MainScreenButton.swift in Sources */,
+				4A586E0D2926BE69001B8B24 /* EpisodeCustomCell.swift in Sources */,
 				4ABC92C5291956AF0040B76A /* MainScreenPresenter.swift in Sources */,
 				4ABC92D1291959D70040B76A /* MainScreenAssembly.swift in Sources */,
 				4A9C5232292149B300146598 /* LocationViewController.swift in Sources */,
 				4ABC92D329195A0A0040B76A /* CharacterPresenter.swift in Sources */,
 				4AF31CA329193ED100A11E92 /* AppDelegate.swift in Sources */,
 				4AF31CA529193ED100A11E92 /* SceneDelegate.swift in Sources */,
+				4A586E052926BD90001B8B24 /* EpisodesCustomCell.swift in Sources */,
 				4AF31CA729193ED100A11E92 /* MainViewController.swift in Sources */,
+				4A586E082926BE53001B8B24 /* EpisodeViewController.swift in Sources */,
 				4A9C52352922AE6400146598 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

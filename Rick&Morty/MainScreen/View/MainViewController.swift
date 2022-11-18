@@ -53,12 +53,12 @@ class MainViewController: UIViewController{
         navigationController?.pushViewController(charachterVC, animated: true)
     }
     @objc private func testButton2Tapped(){
-        let charachterVC = CharactersViewController()
-        navigationController?.pushViewController(charachterVC, animated: true)
+        let episodesVC = EpisodeViewController()
+        navigationController?.pushViewController(episodesVC, animated: true)
     }
     @objc private func testButton3Tapped(){
-        let charachterVC = CharactersViewController()
-        navigationController?.pushViewController(charachterVC, animated: true)
+        let locationVC = LocationViewController()
+        navigationController?.pushViewController(locationVC, animated: true)
     }
     private func setupButton(){
         view.addSubview(testButton)
