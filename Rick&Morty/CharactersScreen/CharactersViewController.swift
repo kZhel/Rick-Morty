@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftUI
 final class CharactersViewController: UIViewController {
     var myCollectionView:UICollectionView?
     
@@ -30,20 +30,6 @@ final class CharactersViewController: UIViewController {
         let filterButton = createCustomBarButton(image: #imageLiteral(resourceName: "filter"), selector: #selector(filterButtonTapped))
         navigationItem.rightBarButtonItem = filterButton
     }
-    private func createLayout() -> UICollectionViewLayout{
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        //item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.2))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
-        group.interItemSpacing = .fixed(10)
-        let section = NSCollectionLayoutSection(group: group)
-        section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        return layout
-    }
-    
     private func setupSearchBar(){
         let searchController = UISearchController(searchResultsController: nil)
         searchController.extendedLayoutIncludesOpaqueBars = true
@@ -53,10 +39,6 @@ final class CharactersViewController: UIViewController {
         
     }
     private func setupCollectionView(){
-        //let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        //layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
-        
-        
         myCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: createLayout())
         myCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
         //collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -67,9 +49,26 @@ final class CharactersViewController: UIViewController {
         
         self.view = view
     }
+    private func createLayout() -> UICollectionViewLayout{
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.2))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+        group.interItemSpacing = .fixed(10)
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 10
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
 
     @objc private func filterButtonTapped(){
-        print("filterButtonTapped")
+        let swiftUIView = ContentView() // swiftUIView is View
+        let viewCtrl = UIHostingController(rootView: swiftUIView)
+//        let charachterVC = CharactersViewController()
+        navigationController?.pushViewController(viewCtrl, animated: true)
+        
+        
     }
     
 }
@@ -96,6 +95,7 @@ extension CharactersViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
+        
         myCell.backgroundColor = UIColor.green
         myCell.layer.cornerRadius = 6
         return myCell
