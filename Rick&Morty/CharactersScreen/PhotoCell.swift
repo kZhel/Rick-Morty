@@ -24,7 +24,7 @@ class PhotoCell:UICollectionViewCell {
         label.text = "Morty"
         imageView.addSubview(label)
         label.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
-        label.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        label.heightAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 0.35).isActive = true
         label.textAlignment = .center
         label.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
         
