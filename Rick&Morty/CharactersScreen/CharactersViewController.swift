@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 final class CharactersViewController: UIViewController {
     var myCollectionView:UICollectionView?
-    
+    private var photos = #imageLiteral(resourceName: "tumblr_n45cr8dmj61ty0km0o7_1280")
     override func viewDidLoad() {
         let view = UIView()
         super.viewDidLoad()
@@ -41,6 +41,7 @@ final class CharactersViewController: UIViewController {
     private func setupCollectionView(){
         myCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: createLayout())
         myCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
+        myCollectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseId)
         //collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         myCollectionView?.backgroundColor = .mainThemeColor
         myCollectionView?.dataSource = self
@@ -94,9 +95,9 @@ extension CharactersViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
-        
-        myCell.backgroundColor = UIColor.green
+        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseId, for: indexPath) as! PhotoCell
+        myCell.photoImage
+//        myCell.backgroundColor = UIColor.green
         myCell.layer.cornerRadius = 6
         return myCell
     }

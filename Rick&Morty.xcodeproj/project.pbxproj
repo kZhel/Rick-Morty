@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A6FBC32292CF2A8008A933C /* FilterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FBC31292CF2A8008A933C /* FilterScreenView.swift */; };
+		4A6FBC34292CFDD3008A933C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FBC33292CFDD3008A933C /* PhotoCell.swift */; };
 		4A9C5232292149B300146598 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C5231292149B300146598 /* LocationViewController.swift */; };
 		4A9C52352922AE6400146598 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C52342922AE6400146598 /* UIColor+.swift */; };
 		4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92BA291954420040B76A /* CharactersViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		4A6FBC31292CF2A8008A933C /* FilterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenView.swift; sourceTree = "<group>"; };
+		4A6FBC33292CFDD3008A933C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4A9C5231292149B300146598 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		4A9C52342922AE6400146598 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4ABC92BA291954420040B76A /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				4ABC92D229195A0A0040B76A /* CharacterPresenter.swift */,
 				4ABC92D429195C460040B76A /* CharactersScreenAssembly.swift */,
 				4A6FBC31292CF2A8008A933C /* FilterScreenView.swift */,
+				4A6FBC33292CFDD3008A933C /* PhotoCell.swift */,
 			);
 			path = CharactersScreen;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */,
+				4A6FBC34292CFDD3008A933C /* PhotoCell.swift in Sources */,
 				4ABC92D529195C460040B76A /* CharactersScreenAssembly.swift in Sources */,
 				4ABC92CB2919572D0040B76A /* MainScreenModel.swift in Sources */,
 				4ABC92C9291957130040B76A /* MainScreenButtonType.swift in Sources */,
