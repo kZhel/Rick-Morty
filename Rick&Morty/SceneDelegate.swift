@@ -27,11 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let mainViewController=mainScreenAssemble.assemble()
 //        let navgationController=UINavigationController(rootViewController: mainViewController)
         window.makeKeyAndVisible()
-        
-        let swiftUIView = MainMenuView() // swiftUIView is View
-        let viewCtrl = UIHostingController(rootView: swiftUIView)
-        
-        window.rootViewController = UINavigationController(rootViewController: viewCtrl)
+        window.rootViewController = UINavigationController(rootViewController: MainViewController())
         self.window = window
         
     }
