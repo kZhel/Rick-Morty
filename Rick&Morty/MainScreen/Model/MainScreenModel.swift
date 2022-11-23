@@ -6,4 +6,8 @@
 //  Copyright © 2022 Katya. All rights reserved.
 //
 
-import Foundation
+struct MainScreenModel {
+
+    let imageName: String
+    let buttonType: MainScreenButtonType
+}
