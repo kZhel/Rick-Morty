@@ -6,4 +6,7 @@
 //  Copyright © 2022 Katya. All rights reserved.
 //
 
-import Foundation
+enum MainScreenButtonType {
+
+    case characters, locations, episodes
+}

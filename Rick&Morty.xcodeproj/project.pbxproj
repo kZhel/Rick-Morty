@@ -11,6 +11,8 @@
 		4A586E052926BD90001B8B24 /* EpisodesCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A586E042926BD90001B8B24 /* EpisodesCustomCell.swift */; };
 		4A586E082926BE53001B8B24 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A586E072926BE53001B8B24 /* EpisodeViewController.swift */; };
 		4A586E0D2926BE69001B8B24 /* EpisodeCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A586E0C2926BE69001B8B24 /* EpisodeCustomCell.swift */; };
+		4A6FBC32292CF2A8008A933C /* FilterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FBC31292CF2A8008A933C /* FilterScreenView.swift */; };
+		4A6FBC34292CFDD3008A933C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FBC33292CFDD3008A933C /* PhotoCell.swift */; };
 		4A9C5232292149B300146598 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C5231292149B300146598 /* LocationViewController.swift */; };
 		4A9C52352922AE6400146598 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C52342922AE6400146598 /* UIColor+.swift */; };
 		4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC92BA291954420040B76A /* CharactersViewController.swift */; };
@@ -53,6 +55,8 @@
 		4A586E042926BD90001B8B24 /* EpisodesCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EpisodesCustomCell.swift; path = ../../../../Downloads/EpisodesCustomCell.swift; sourceTree = "<group>"; };
 		4A586E072926BE53001B8B24 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		4A586E0C2926BE69001B8B24 /* EpisodeCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCustomCell.swift; sourceTree = "<group>"; };
+		4A6FBC31292CF2A8008A933C /* FilterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreenView.swift; sourceTree = "<group>"; };
+		4A6FBC33292CFDD3008A933C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4A9C5231292149B300146598 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		4A9C52342922AE6400146598 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4ABC92BA291954420040B76A /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				4ABC92BA291954420040B76A /* CharactersViewController.swift */,
 				4ABC92D229195A0A0040B76A /* CharacterPresenter.swift */,
 				4ABC92D429195C460040B76A /* CharactersScreenAssembly.swift */,
+				4A6FBC31292CF2A8008A933C /* FilterScreenView.swift */,
+				4A6FBC33292CFDD3008A933C /* PhotoCell.swift */,
 			);
 			path = CharactersScreen;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABC92BB291954420040B76A /* CharactersViewController.swift in Sources */,
+				4A6FBC34292CFDD3008A933C /* PhotoCell.swift in Sources */,
 				4ABC92D529195C460040B76A /* CharactersScreenAssembly.swift in Sources */,
 				4A586DFC29267C57001B8B24 /* EpisodesViewController.swift in Sources */,
 				4ABC92CB2919572D0040B76A /* MainScreenModel.swift in Sources */,
@@ -393,6 +400,7 @@
 				4A9C5232292149B300146598 /* LocationViewController.swift in Sources */,
 				4ABC92D329195A0A0040B76A /* CharacterPresenter.swift in Sources */,
 				4AF31CA329193ED100A11E92 /* AppDelegate.swift in Sources */,
+				4A6FBC32292CF2A8008A933C /* FilterScreenView.swift in Sources */,
 				4AF31CA529193ED100A11E92 /* SceneDelegate.swift in Sources */,
 				4A586E052926BD90001B8B24 /* EpisodesCustomCell.swift in Sources */,
 				4AF31CA729193ED100A11E92 /* MainViewController.swift in Sources */,
