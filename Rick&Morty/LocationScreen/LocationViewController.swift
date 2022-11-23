@@ -1,10 +1,3 @@
-//
-//  LocationViewController.swift
-//  Rick&Morty
-//
-//  Created by Katya on 13.11.2022.
-//  Copyright © 2022 Katya. All rights reserved.
-//
 import UIKit
 import SwiftUI
 final class LocationViewController: UIViewController {
@@ -30,7 +23,6 @@ final class LocationViewController: UIViewController {
         myCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: createLayout())
         myCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
         myCollectionView?.register(LocationCell.self, forCellWithReuseIdentifier: LocationCell.reuseId)
-        //collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         myCollectionView?.backgroundColor = .mainThemeColor
         myCollectionView?.dataSource = self
         myCollectionView?.delegate = self
@@ -50,15 +42,6 @@ final class LocationViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-
-    @objc private func filterButtonTapped(){
-        let swiftUIView = ContentView() // swiftUIView is View
-        let viewCtrl = UIHostingController(rootView: swiftUIView)
-//        let charachterVC = CharactersViewController()
-        navigationController?.pushViewController(viewCtrl, animated: true)
-        
-        
-    }
     
 }
 
@@ -70,7 +53,6 @@ final class LocationViewController: UIViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: LocationCell.reuseId, for: indexPath) as! LocationCell
         myCell.photoImage
-//        myCell.backgroundColor = UIColor.green
         myCell.layer.cornerRadius = 6
         return myCell
     }

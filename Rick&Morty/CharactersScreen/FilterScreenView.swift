@@ -19,7 +19,6 @@ struct ContentView: View {
     enum Status : String{
         case Alive, Dead, Unknown
     }
-//    возможно, это как-то покрасивше объявляется в ресурсах, я хз
     var colorNotPicked : Color = Color.white
     var colorPicked : Color = Color.green
     var backgroundColor : Color = Color(red: 0.15, green: 0.15, blue: 0.19, opacity: 1)
@@ -134,5 +133,4 @@ struct RadioButton : View {
     }
 }
 
-//TODO: перенести все говно в свои структуры (radioButton)
 

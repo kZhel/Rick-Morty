@@ -1,11 +1,3 @@
-//
-//  MainScreenButton.swift
-//  Rick&Morty
-//
-//  Created by Katya on 07.11.2022.
-//  Copyright © 2022 Katya. All rights reserved.
-//
-
 
 import UIKit
 
@@ -55,7 +47,6 @@ private extension MainScreenButton {
             }
         }
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        self.layer.cornerRadius = 200
         setBackgroundImage(backgroundImage, for: .normal)
     }
     

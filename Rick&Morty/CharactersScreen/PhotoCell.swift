@@ -1,10 +1,3 @@
-//
-//  PhotoCell.swift
-//  Rick&Morty
-//
-//  Created by Katya on 22.11.2022.
-//  Copyright © 2022 Katya. All rights reserved.
-//
 
 import Foundation
 import UIKit

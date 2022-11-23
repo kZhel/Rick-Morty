@@ -1,10 +1,3 @@
-//
-//  CharactersViewController.swift
-//  Rick&Morty
-//
-//  Created by Katya on 07.11.2022.
-//  Copyright © 2022 Katya. All rights reserved.
-//
 
 import UIKit
 import SwiftUI
@@ -42,7 +35,6 @@ final class CharactersViewController: UIViewController {
         myCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: createLayout())
         myCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
         myCollectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseId)
-        //collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         myCollectionView?.backgroundColor = .mainThemeColor
         myCollectionView?.dataSource = self
         myCollectionView?.delegate = self
@@ -66,7 +58,6 @@ final class CharactersViewController: UIViewController {
     @objc private func filterButtonTapped(){
         let swiftUIView = ContentView() // swiftUIView is View
         let viewCtrl = UIHostingController(rootView: swiftUIView)
-//        let charachterVC = CharactersViewController()
         navigationController?.pushViewController(viewCtrl, animated: true)
         
         
@@ -97,13 +88,7 @@ extension CharactersViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseId, for: indexPath) as! PhotoCell
         myCell.photoImage
-//        myCell.backgroundColor = UIColor.green
         myCell.layer.cornerRadius = 6
         return myCell
     }
 }
-//extension CharactersViewController: UICollectionViewDelegateFlowLayout{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize.init(width: (view.bounds.width-20)/3, height: (view.bounds.height-30)/5)
-//    }
-//}
