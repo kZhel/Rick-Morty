@@ -24,16 +24,16 @@ final class EpisodeViewController: UIViewController {
         
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataModel.count
-    }
-    override func collectionView(_ collectionView: UICollectionView, cellForIteamAt indexPath: IndexPath) -> UICollectionViewCell {
-        _ = collectionView.dequeueReusableCell(withReuseIdentifier: "ccell", for: indexPath) as! EpisodeCustomCell
-        cell.imageView.image = UIImage(named: "\(dataModel[indexPath.item]).jpeg")
-        
-        return cell
-        
-    }
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return dataModel.count
+//    }
+//    override func collectionView(_ collectionView: UICollectionView, cellForIteamAt indexPath: IndexPath) -> UICollectionViewCell {
+//        _ = collectionView.dequeueReusableCell(withReuseIdentifier: "ccell", for: indexPath) as! EpisodeCustomCell
+//        cell.imageView.image = UIImage(named: "\(dataModel[indexPath.item]).jpeg")
+//        
+//        return cell
+//        
+//    }
 
     private func setupNavigationBar(){
         createCustomNavigationBarE()
