@@ -71,7 +71,8 @@ extension MainViewController: MainScreenButtonDelegate {
             let episodeVC = EpisodeViewController()
             navigationController?.pushViewController(episodeVC, animated: true)
         case .locations:
-            let charachterVC = CharactersViewController()
+            let locationVC = LocationViewController()
+            navigationController?.pushViewController(locationVC, animated: true)
         }
         
     }
