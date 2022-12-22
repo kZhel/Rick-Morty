@@ -1,17 +1,37 @@
 
 import UIKit
 import SwiftUI
+protocol CharactersViewProtocol {
+    func success()
+    func failure(error: Error)
+}
 final class CharactersViewController: UIViewController {
     var myCollectionView:UICollectionView?
+    let rmClient = RMClient()
+    var charactersArr: [CharacterModel]?
     private var photos = #imageLiteral(resourceName: "tumblr_n45cr8dmj61ty0km0o7_1280")
     override func viewDidLoad() {
         let view = UIView()
         super.viewDidLoad()
         view.backgroundColor = .mainThemeColor
+        getCharacters()
         setupNavigationBar()
         setupCollectionView()
         setupSearchBar()
-
+    }
+    func getCharacters(){
+        rmClient.character().getAllCharacters() {[weak self] result in
+            guard let self = self else {return}
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let characters):
+                    self.charactersArr = characters
+                    self.success()
+                case.failure(let error):
+                    self.failure(error: error)
+                }
+            }
+        }
     }
     private func setupNavigationBar(){
         createCustomNavigationBar()
@@ -82,13 +102,25 @@ extension UIViewController{
 }
 extension CharactersViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return charactersArr?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseId, for: indexPath) as! PhotoCell
-        myCell.photoImage
+        
+        myCell.photoImage(text: charactersArr?[indexPath.row].name ?? "", imageURL: charactersArr?[indexPath.row].image ?? "")
         myCell.layer.cornerRadius = 6
         return myCell
     }
+}
+extension CharactersViewController: CharactersViewProtocol{
+    func success() {
+        myCollectionView?.reloadData()
+    }
+    
+    func failure(error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    
 }
