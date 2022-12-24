@@ -10,7 +10,6 @@ final class CharactersViewController: UIViewController, UISearchBarDelegate {
     let rmClient = RMClient()
     var charactersArr: [CharacterModel]?
     var charactersActualData: [CharacterModel]?
-    private var photos = #imageLiteral(resourceName: "tumblr_n45cr8dmj61ty0km0o7_1280")
     override func viewDidLoad() {
         let view = UIView()
         super.viewDidLoad()
@@ -144,7 +143,6 @@ extension CharactersViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseId, for: indexPath) as! PhotoCell
-        
         myCell.photoImage(text: charactersArr?[indexPath.row].name ?? "", imageURL: charactersArr?[indexPath.row].image ?? "")
         myCell.layer.cornerRadius = 6
         return myCell

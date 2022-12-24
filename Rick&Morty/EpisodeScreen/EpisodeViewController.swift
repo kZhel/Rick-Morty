@@ -2,13 +2,30 @@ import UIKit
 import SwiftUI
 final class EpisodeViewController: UIViewController {
     var myCollectionView:UICollectionView?
+    let rmClient = RMClient()
+    var episodeArr: [EpisodeModel]?
     override func viewDidLoad() {
         let view = UIView()
         super.viewDidLoad()
         view.backgroundColor = .mainThemeColor
+        getEpisode()
         setupNavigationBar()
         setupCollectionView()
 
+    }
+    func getEpisode(){
+        rmClient.episode().getAllEpisodes() {[weak self] result in
+            guard let self = self else {return}
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let episode):
+                    self.episodeArr = episode
+                    self.success()
+                case.failure(let error):
+                    self.failure(error: error)
+                }
+            }
+        }
     }
     private func setupNavigationBar(){
         createCustomNavigationBar()
@@ -47,14 +64,25 @@ final class EpisodeViewController: UIViewController {
 
  extension EpisodeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return episodeArr?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: EpisodeCustomCell.reuseId, for: indexPath) as! EpisodeCustomCell
-        myCell.photoImage
+        myCell.photoImage(name: episodeArr?[indexPath.row].name ?? "", episode: episodeArr?[indexPath.row].episode ?? "", airDate: episodeArr?[indexPath.row].airDate ?? "")
         myCell.layer.cornerRadius = 6
         return myCell
     }
 }
 
+extension EpisodeViewController: CharactersViewProtocol{
+    func success() {
+        myCollectionView?.reloadData()
+    }
+    
+    func failure(error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    
+}
